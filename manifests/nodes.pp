@@ -1,6 +1,8 @@
-node '01.test.com' {
+node '02.test.com' {
 	include sudo
 	include ntp
-	include ssh
-	include default-new
+#	include ssh
+	include initialize
+#	include default-define
+#	include default-new
 }
