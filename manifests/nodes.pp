@@ -3,6 +3,5 @@ node '02.test.com' {
 	include ntp
 	include ssh
 #	include initialize
-#	include default-define
-#	include default-new
+	include	sun-jdk
 }
