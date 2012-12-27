@@ -1,0 +1,5 @@
+There is no redis package.so you need to down the redis for version is 2.6.7 and the save is redis-2.6.7.tar.gz
+You can use these command to download;
+
+		cd /etc/puppet/modules/redis/files
+		wget http://redis.googlecode.com/files/redis-2.6.7.tar.gz
