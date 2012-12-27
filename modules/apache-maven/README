@@ -1,0 +1,5 @@
+There is no maven package.so you need to down the ant for version is 3.0.4 and the save is apache-maven-3.0.4-bin.tar.gz
+You can use these command to download;
+
+		cd /etc/puppet/modules/apache-maven/files
+		wget http://www.fayea.com/apache-mirror/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz

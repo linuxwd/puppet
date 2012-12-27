@@ -1,0 +1,5 @@
+There is no ANT package.so you need to down the ant for version is 1.8.4 and the save is apache-ant-1.8.4-bin.tar.gz
+You can use these command to download;
+
+		cd /etc/puppet/modules/apache-ant/files
+		wget http://mirrors.tuna.tsinghua.edu.cn/apache//ant/binaries/apache-ant-1.8.4-bin.tar.gz
