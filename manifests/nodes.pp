@@ -6,5 +6,6 @@ node '02.test.com' {
 #	include	sun-jdk
 #	include	apache-ant
 #	include	apache-maven
-	include	redis
+#	include	redis
+	include	mongodb
 }

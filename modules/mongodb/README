@@ -1,0 +1,5 @@
+There is no mongodb package.so you need to down the mongodb for version is 2.2.2 and the save is mongodb-linux-x86_64-2.2.2.tgz
+You can use these command to download;
+
+		cd /etc/puppet/modules/mongodb/files
+		wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.2.2.tgz
