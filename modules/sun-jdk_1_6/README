@@ -1,0 +1,100 @@
+This module is not integrity.Because there is no jdk package.so you need to down the "jdk-6u38-linux-x64-rpm.bin" to save the "/etc/puppet/modules/sun-jdk/files" Directory. Because the "jdk-6u38-linux-x64-rpm.bin" package is too big.
+
+
+
+
+
+
+
+
+			Download Oracle Java JRE & JDK using a script
+
+
+	Oracle has recently disallowed direct downloads of java from their servers (without going through the browser and agreeing to their terms, which you can look at here: http://www.oracle.com/technetwork/java/javase/terms/license/index.html ). So, if you try to wget http://download.oracle.com/otn-pub/java/jdk/7u4-b20/jdk-7u4-linux-x64.tar.gz you will receive a page with “In order to download products from Oracle Technology Network you must agree to the OTN license terms” error message.
+
+	This can be rather troublesome for setting up servers with automated scripts.
+
+	Luckily, it seems that a single cookie is all that is needed to bypass this (you still have to agree to the terms to install):
+
+Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F
+
+So, if you you want to download jdk7u4 for 64-bit Linux (e.g., Ubuntu) using wget, you can use:
+
+
+#####################################################################################################################################################
+wget --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F" \
+"http://download.oracle.com/otn-pub/java/jdk/7u4-b20/jdk-7u4-linux-x64.tar.gz"
+
+#####################################################################################################################################################
+
+
+Just for reference, here are the links to the current (at the time of posting) downloads of JDK and JRE
+
+UPDATE: instead of having new post for each JDK/JRE update I’ll just keep updating this one
+
+JDK 7u10
+
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-linux-i586.rpm
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-linux-i586.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-linux-x64.rpm
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-linux-x64.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-macosx-x64.dmg
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-i586.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-i586.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-sparc.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-sparc.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-sparcv9.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-sparcv9.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-x64.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-solaris-x64.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-windows-i586.exe
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-windows-x64.exe
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jdk-7u10-linux-arm-sfp.tar.gz
+JDK 6u38
+
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-linux-i586-rpm.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-linux-i586.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-linux-x64-rpm.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-linux-x64.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-i586.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-i586.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-sparc.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-sparc.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-sparcv9.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-sparcv9.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-x64.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-solaris-x64.tar.Z
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-windows-i586.exe
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jdk-6u38-windows-x64.exe
+JRE 7u10
+
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-linux-i586.rpm
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-linux-i586.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-linux-x64.rpm
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-linux-x64.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-macosx-x64.dmg
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-macosx-x64.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-solaris-i586.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-solaris-sparc.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-solaris-sparcv9.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-solaris-x64.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-windows-i586-iftw.exe
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-windows-i586.exe
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-windows-i586.tar.gz
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-windows-x64.exe
+http://download.oracle.com/otn-pub/java/jdk/7u10-b18/jre-7u10-windows-x64.tar.gz
+JRE 6u38
+
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-linux-i586-rpm.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-linux-i586.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-linux-x64-rpm.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-linux-x64.bin
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-solaris-i586.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-solaris-sparc.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-solaris-sparcv9.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-solaris-x64.sh
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-windows-i586-iftw-k.exe
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-windows-i586-iftw.exe
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-windows-i586.exe
+http://download.oracle.com/otn-pub/java/jdk/6u38-b05/jre-6u38-windows-x64.exe
+
